@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Legend — GTA VI Trophy Guide &amp; Tracker</title>
+<meta name="description" content="An offline guide and tracker for all 55 PlayStation 5 trophies of Grand Theft Auto VI: cited guides, a roadmap to the platinum, missable flags and a saved checklist.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-inner">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true">VL</span>
+      <div>
+        <h1>Leonida Legend</h1>
+        <p class="tagline">The GTA VI trophy guide &amp; tracker — all 55 PS5 trophies, offline</p>
+      </div>
+    </div>
+    <div class="progress-block" aria-label="Platinum progress">
+      <div class="progress-numbers"><strong id="earned-count">0</strong> / 55 earned <span id="progress-pct">0%</span></div>
+      <div class="progress-bar"><div id="progress-fill" class="progress-fill" style="width:0%"></div></div>
+      <div class="grade-counts" id="grade-counts"></div>
+    </div>
+  </div>
+  <nav class="tabs" aria-label="Guide sections">
+    <button class="tab active" data-view="tracker" type="button">Tracker</button>
+    <button class="tab" data-view="roadmap" type="button">Roadmap to Platinum</button>
+    <button class="tab" data-view="about" type="button">About &amp; Sources</button>
+  </nav>
+</header>
+
+<main>
+  <section id="view-tracker" class="view active">
+    <div class="toolbar">
+      <div class="filters" role="group" aria-label="Filter trophies">
+        <button class="filter active" data-filter="all" type="button">All <span class="n">55</span></button>
+        <button class="filter" data-filter="story" type="button">Story <span class="n">12</span></button>
+        <button class="filter" data-filter="missable" type="button">Missable <span class="n">2</span></button>
+        <button class="filter" data-filter="collectibles" type="button">Collectibles <span class="n">5</span></button>
+        <button class="filter" data-filter="activities" type="button">Activities <span class="n">36</span></button>
+        <button class="filter" data-filter="online" type="button">Online <span class="n">0</span></button>
+      </div>
+      <div class="toolbar-right">
+        <label class="search-box"><span class="sr-only">Search trophies</span><input id="search" type="search" placeholder="Search name or description…" autocomplete="off"></label>
+        <label class="spoiler-toggle"><input id="spoiler" type="checkbox"> <span>Hide story spoilers</span></label>
+        <button id="export-btn" type="button">Export progress</button>
+        <label class="import-btn">Import progress<input id="import-file" type="file" accept="application/json,.json" hidden></label>
+      </div>
+    </div>
+    <p id="online-note" class="online-note" hidden>This list has no online trophies: all 55 unlock in single-player. <a href="https://outputlag.com/guides/gta-6-trophy-list/">Output Lag — GTA 6 Trophy List</a></p>
+    <p id="filter-note" class="filter-note"></p>
+    <div class="tracker-layout">
+      <div class="list-col">
+        <ul id="trophy-list" class="trophy-list"></ul>
+      </div>
+      <aside id="detail" class="detail" aria-live="polite">
+        <p class="detail-empty">Pick a trophy to read its guide, steps and sources.</p>
+      </aside>
+    </div>
+  </section>
+
+  <section id="view-roadmap" class="view">
+    <div class="roadmap-intro">
+      <h2>Roadmap to the Platinum</h2>
+      <p>One playthrough, about 200 hours, no difficulty trophies and no online trophies. The order below follows the official descriptions: story chapters first, side strands next, then the long grinds. Keep a manual save at the start of every chapter — there is no mission replay.</p>
+      <p class="roadmap-warning"><strong>One missable trophy:</strong> Positive Mental Attitude — Lucia's balcony meditation in Chapter 1 disappears after the chapter. Do it, and keep a Chapter 1 save until the trophy pops.</p>
+    </div>
+    <ol id="roadmap-stages" class="roadmap-stages"></ol>
+  </section>
+
+  <section id="view-about" class="view">
+    <div class="about">
+      <h2>About this guide</h2>
+      <p>Grand Theft Auto VI launched on 19 November 2026. This guide covers its 55 PlayStation 5 trophies — 1 platinum, 2 gold, 6 silver and 46 bronze, 28 of them hidden until earned — with the official name, description and grade of each, as the trophy trackers list them.</p>
+      <p>Every guide is written for this entry in its own words. Each one cites the published source its facts come from, beside the guide. Where launch-week sources say no unlock method is confirmed yet, the guide says so instead of inventing one.</p>
+      <h3>How the tracker works</h3>
+      <ul>
+        <li>Tick a trophy to mark it earned. Progress is saved in this browser (localStorage) and survives reloads.</li>
+        <li><strong>Export progress</strong> downloads your checklist as a JSON file; <strong>Import progress</strong> restores it.</li>
+        <li><strong>Hide story spoilers</strong> masks the names and descriptions of story trophies until you earn them.</li>
+        <li>Filters split the list by kind: story, missable, collectibles, activities, online.</li>
+        <li>The app works fully offline: it loads only its own files and makes no network request. Source links open only when you follow them.</li>
+      </ul>
+      <h3>Sources</h3>
+      <ul id="source-list" class="source-list"></ul>
+      <p class="disclaimer">An unofficial fan guide. Grand Theft Auto and GTA are trademarks of Take-Two Interactive. No Rockstar Games logo, official artwork, box art or game screenshots are used here; the look is this guide's own.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <p>Leonida Legend — an unofficial offline trophy guide for Grand Theft Auto VI on PS5. 55 trophies · 1 platinum · 2 gold · 6 silver · 46 bronze.</p>
+</footer>
+
+<script type="module" src="tracker.js"></script>
+</body>
+</html>
